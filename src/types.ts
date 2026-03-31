@@ -1,0 +1,25 @@
+export interface Track {
+  id: string;
+  title: string;
+  artist: string;
+  url: string;
+  cover: string;
+}
+
+export type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
+
+export interface Point {
+  x: number;
+  y: number;
+}
+
+export interface GameState {
+  snake: Point[];
+  food: Point;
+  obstacles: Point[];
+  direction: Direction;
+  isGameOver: boolean;
+  score: number;
+  highScore: number;
+  level: number;
+}
